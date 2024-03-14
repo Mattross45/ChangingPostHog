@@ -35,7 +35,6 @@ namespace PostHog.Model
             }
         }
 
-        [Newtonsoft.Json.JsonConstructorAttribute]
         protected Properties(Dictionary<string, object> eventProperties)
         {
             _eventProperties = eventProperties;
