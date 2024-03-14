@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Newtonsoft.Json;
 
 namespace PostHog.Model
 {
@@ -35,7 +34,6 @@ namespace PostHog.Model
             }
         }
 
-        [JsonConstructor]
         protected Properties(Dictionary<string, object> eventProperties)
         {
             _eventProperties = eventProperties;
