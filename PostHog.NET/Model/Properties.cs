@@ -35,7 +35,6 @@ namespace PostHog.Model
             }
         }
 
-        [JsonConstructor]
         protected Properties(Dictionary<string, object> eventProperties)
         {
             _eventProperties = eventProperties;
