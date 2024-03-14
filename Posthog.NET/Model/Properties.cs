@@ -6,7 +6,6 @@ using Newtonsoft.Json;
 namespace PostHog.Model
 {
     public class Properties : IReadOnlyDictionary<string, object>
-    {
         [System.Text.Json.Serialization.JsonIgnore]
         private readonly Dictionary<string, object> _eventProperties = new Dictionary<string, object>();
 
