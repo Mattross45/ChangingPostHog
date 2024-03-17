@@ -1,6 +1,6 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace PostHog.Model
 {
@@ -35,7 +35,6 @@ namespace PostHog.Model
             }
         }
 
-        [JsonConstructor]
         protected Properties(Dictionary<string, object> eventProperties)
         {
             _eventProperties = eventProperties;
