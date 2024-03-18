@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using NewtonsoftJson = Newtonsoft.Json;
 using System.Text.Json.Serialization;
 
 namespace PostHog.Model
