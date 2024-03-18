@@ -20,7 +20,7 @@ namespace PostHog.Model
         [JsonProperty(PropertyName = "event")]
         public string Event { get; set; }
 
-        [JsonProperty(PropertyName = "properties")]
+        [JsonPropertyName("properties")]
         public Properties? Properties { get; set; }
 
         [System.Text.Json.Serialization.JsonIgnore]
