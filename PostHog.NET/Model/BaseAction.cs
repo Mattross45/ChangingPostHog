@@ -22,7 +22,7 @@ namespace PostHog.Model
         [JsonProperty(PropertyName = "properties")]
         public Properties? Properties { get; set; }
 
-        [JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
         public int Size { get; set; }
 
         [JsonProperty(PropertyName = "timestamp")]
