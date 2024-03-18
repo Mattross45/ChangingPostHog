@@ -1,7 +1,6 @@
-﻿using System;
+using System;
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
-using System.Text.Json.Serialization;
 
 namespace PostHog.Model
 {
@@ -18,7 +17,7 @@ namespace PostHog.Model
         [JsonPropertyName("distinct_id")]
         public string? DistinctId { get; set; }
 
-[JsonPropertyName("event")]
+        [JsonPropertyName("event")]
         public string Event { get; set; }
 
         [JsonPropertyName("properties")]
