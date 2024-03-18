@@ -3,7 +3,6 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using PostHog.Model;
 using PostHog.Request;
 
@@ -76,7 +75,7 @@ namespace PostHog.Flush
 
         public void Process(BaseAction action)
         {
-            action.Size = JsonConvert.SerializeObject(action).Length;
+            action.Size = System.Text.Json.JsonSerializer.Serialize(action).Length;
 
             if (action.Size > ActionMaxSize)
             {

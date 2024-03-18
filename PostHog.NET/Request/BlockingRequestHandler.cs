@@ -7,7 +7,6 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using PostHog.Exceptions;
 using PostHog.Model;
 
@@ -65,7 +64,7 @@ namespace PostHog.Request
 
                 var uri = uriBuilder.Uri;
 
-                var json = JsonConvert.SerializeObject(batch);
+                var json = System.Text.Json.JsonSerializer.Serialize(batch);
 
                 // Prepare request data;
                 var requestData = Encoding.UTF8.GetBytes(json);
