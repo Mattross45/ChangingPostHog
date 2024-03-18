@@ -26,7 +26,7 @@ namespace PostHog.Model
         [System.Text.Json.Serialization.JsonIgnore]
         public int Size { get; set; }
 
-        [JsonProperty(PropertyName = "timestamp")]
+        [JsonConverter(typeof(JsonConverterDateTime)), JsonPropertyName("timestamp")]
         public DateTime Timestamp { get; set; }
     }
 }
