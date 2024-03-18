@@ -1,6 +1,6 @@
 using System;
+using System.Text.Json;
 using System.Text.Json.Serialization;
-using Newtonsoft.Json;
 
 namespace PostHog.Model
 {
@@ -23,7 +23,7 @@ namespace PostHog.Model
         [JsonPropertyName("properties")]
         public Properties? Properties { get; set; }
 
-        [System.Text.Json.Serialization.JsonIgnore]
+        [JsonIgnore]
         public int Size { get; set; }
 
         [JsonConverter(typeof(JsonConverterDateTime)), JsonPropertyName("timestamp")]
