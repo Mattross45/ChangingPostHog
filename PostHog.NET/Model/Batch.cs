@@ -15,7 +15,7 @@ namespace PostHog.Model
         [JsonProperty(PropertyName = "batch")]
         internal List<BaseAction> Actions { get; set; }
 
-        [JsonProperty(PropertyName = "api_key")]
+[JsonPropertyName("api_key")]
         internal string ApiKey { get; set; }
     }
 }
