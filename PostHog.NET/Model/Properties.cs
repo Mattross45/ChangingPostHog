@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using NewtonsoftJson = Newtonsoft.Json;
 using System.Text.Json.Serialization;
 
 namespace PostHog.Model
 {
     public class Properties : IReadOnlyDictionary<string, object>
     {
-        [System.Text.Json.Serialization.JsonIgnore]
+        [JsonIgnore]
         private readonly Dictionary<string, object> _eventProperties = new Dictionary<string, object>();
 
         [JsonIgnore]
         private readonly Dictionary<string, object> _userPropertiesToSet = new Dictionary<string, object>();
 
-        [System.Text.Json.Serialization.JsonIgnore]
+        [JsonIgnore]
         private readonly Dictionary<string, object> _userPropertiesToSetOnce = new Dictionary<string, object>();
 
         public Properties()
@@ -36,7 +35,7 @@ namespace PostHog.Model
             }
         }
 
-        [System.Text.Json.Serialization.JsonConstructor]
+        [JsonConstructor]
         protected Properties(Dictionary<string, object> eventProperties)
         {
             _eventProperties = eventProperties;
