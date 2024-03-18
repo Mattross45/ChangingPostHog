@@ -65,7 +65,7 @@ namespace PostHog.Request
 
                 var uri = uriBuilder.Uri;
 
-                var json = JsonConvert.SerializeObject(batch);
+                var json = System.Text.Json.JsonSerializer.Serialize(batch);
 
                 // Prepare request data;
                 var requestData = Encoding.UTF8.GetBytes(json);
