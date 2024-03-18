@@ -76,7 +76,7 @@ namespace PostHog.Flush
 
         public void Process(BaseAction action)
         {
-            action.Size = JsonConvert.SerializeObject(action).Length;
+            action.Size = System.Text.Json.JsonSerializer.Serialize(action).Length;
 
             if (action.Size > ActionMaxSize)
             {
