@@ -18,7 +18,7 @@ namespace PostHog.Model
         [JsonPropertyName("distinct_id")]
         public string? DistinctId { get; set; }
 
-        [JsonProperty(PropertyName = "event")]
+[JsonPropertyName("event")]
         public string Event { get; set; }
 
         [JsonPropertyName("properties")]
