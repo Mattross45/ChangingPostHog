@@ -15,7 +15,7 @@ namespace PostHog.Model
             Timestamp = timestamp ?? DateTime.UtcNow;
         }
 
-        [JsonProperty(PropertyName = "distinct_id")]
+        [JsonPropertyName("distinct_id")]
         public string? DistinctId { get; set; }
 
         [JsonProperty(PropertyName = "event")]
