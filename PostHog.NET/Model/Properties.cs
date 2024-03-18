@@ -6,7 +6,7 @@ namespace PostHog.Model
 {
     public class Properties : IReadOnlyDictionary<string, object>
     {
-        [JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
         private readonly Dictionary<string, object> _eventProperties = new Dictionary<string, object>();
 
         [JsonIgnore]
