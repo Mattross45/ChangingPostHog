@@ -12,7 +12,7 @@ namespace PostHog.Model
         [JsonIgnore]
         private readonly Dictionary<string, object> _userPropertiesToSet = new Dictionary<string, object>();
 
-        [JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
         private readonly Dictionary<string, object> _userPropertiesToSetOnce = new Dictionary<string, object>();
 
         public Properties()
